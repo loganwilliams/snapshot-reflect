@@ -10,7 +10,7 @@ import random
 # This conversational twitter bot is running on a 1 minute cron job on the fog.today server,
 # posting tweets from @SnapshotReflect.
 
-# The main method at the end of the file instantiates a QuestionGenerator and process new
+# The main method at the end of the file instantiates a QuestionGenerator and processes new
 # tweets and DMs. QuestionGenerator uses the Microsoft Computer Vision API to get image
 # content information, then expands a Tracery (https://github.com/galaxykate/tracery)
 # grammar to generate a hopefully-relevant question. The conversation history is stored
@@ -20,7 +20,7 @@ import random
 #   - generalize some of the question generators (i.e. "Is that your [object]" rather than
 #     "Is that your book", etc
 #   - database operations should be more atomic. right now it can put its database in a bad state
-#     if it encounters a microsoft Computer Vision API error
+#     if it encounters a Computer Vision API error
 #   - conversation should maybe be its own class?
 #   - ending excuses are funny but need some work
 #   - switch to real logging
