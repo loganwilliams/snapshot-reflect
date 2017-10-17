@@ -542,7 +542,7 @@ class QuestionGenerator():
             
             self.db.conversations.update_one({'image': conversation['image']}, {'$set': conversation})
         elif conversation['num_messages'] < 5:
-            output = random.choice(conversation_excuses)
+            output = random.choice(self.conversation_excuses)
 
             # tweet generated question
             print '* process_tweet | tweeting new tweet:\n\t' + output
@@ -604,7 +604,7 @@ class QuestionGenerator():
             
             self.db.conversations.update_one({'image': conversation['image']}, {'$set': conversation})
         elif conversation['num_messages'] < 5:
-            output = random.choice(conversation_excuses)
+            output = random.choice(self.conversation_excuses)
 
             # tweet generated question
             print '* process_dm | tweeting new tweet:\n\t' + output
